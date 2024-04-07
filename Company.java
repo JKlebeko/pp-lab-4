@@ -1,16 +1,27 @@
+import employees.Employee;
+import employees.Manager;
+import employees.Worker;
+
 public class Company {
+
     public static void main(String[] args) {
 Employee employees[]=new Employee[5];
-        employees[0]=new Employee(99999,"jaca");
-        employees[1]=new Employee(9,"zenek");
+        employees[0]=new Manager(99999,"jaca");
+        employees[1]=new Worker(9,"zenek");
         employees[2]=new Employee(1,"gienek");
         employees[3]=new Employee(929,"marian");
-        employees[4]=new Employee(808,"waldek");
+        employees[4]=new Worker(808,"waldek");
+new Manager(employees[0]).setNumberOfSubordinates(0);
 
-        System.out.println(employees[3].getSalary());
+
+
+      //  System.out.println(employees[3].getSalary());
         employees[3].setSalary(145);
         for (int i = 0; i < employees.length; i++) {
-            System.out.println(employees[i].getSalary());
+            System.out.println(employees[i].toString());
         }
+
+
+
     }
 }

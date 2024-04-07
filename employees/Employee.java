@@ -1,3 +1,5 @@
+package employees;
+
 public class Employee {
 
     private String fullName;
@@ -15,7 +17,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee:" + fullName +", Salary:\n"+ salary;
+        return "Employee: " + getFullName() +", Salary: "+ getSalary();
     }
 
     public Employee(double salary, String fullName) {
